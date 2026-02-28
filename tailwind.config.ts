@@ -14,9 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Orbitron", "sans-serif"],
+        display: ["Poppins", "sans-serif"],
         body: ["Space Grotesk", "sans-serif"],
         accent: ["Rajdhani", "sans-serif"],
+        script: ["Dancing Script", "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -52,6 +53,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        cultural: "hsl(var(--cultural))",
+        technical: "hsl(var(--technical))",
+        sports: "hsl(var(--sports))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,9 +66,6 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        neon: "hsl(var(--neon-glow))",
-        gold: "hsl(var(--gold))",
-        "electric-red": "hsl(var(--electric-red))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -82,14 +83,10 @@ export default {
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-12px)" },
+          "50%": { transform: "translateY(-10px)" },
         },
-        "pulse-glow": {
-          "0%, 100%": { opacity: "0.4" },
-          "50%": { opacity: "1" },
-        },
-        "slide-up": {
-          from: { opacity: "0", transform: "translateY(40px)" },
+        "fade-in-up": {
+          from: { opacity: "0", transform: "translateY(30px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
       },
@@ -97,8 +94,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         float: "float 3s ease-in-out infinite",
-        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
-        "slide-up": "slide-up 0.6s ease-out forwards",
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
       },
     },
   },

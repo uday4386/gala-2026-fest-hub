@@ -4,12 +4,10 @@ import kitsLogo from "@/assets/kits-logo.png";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden hero-gradient px-4">
-      {/* Subtle decorative shapes */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[80px] -translate-y-1/3 translate-x-1/4" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-secondary/[0.05] blur-[80px] translate-y-1/3 -translate-x-1/4" />
 
       <div className="relative z-10 flex flex-col items-center gap-4 text-center">
-        {/* Logo + College Name */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -32,7 +30,6 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* Gala Script */}
         <motion.h1
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -42,7 +39,6 @@ const HeroSection = () => {
           Gala
         </motion.h1>
 
-        {/* 2K26 */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -52,7 +48,6 @@ const HeroSection = () => {
           2K26
         </motion.p>
 
-        {/* The Youth Fest */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -62,7 +57,6 @@ const HeroSection = () => {
           The Youth Fest
         </motion.p>
 
-        {/* Category badges */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -80,7 +74,6 @@ const HeroSection = () => {
           </span>
         </motion.div>
 
-        {/* Date */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -92,19 +85,35 @@ const HeroSection = () => {
           </span>
         </motion.div>
 
-        {/* CTA */}
+        {/* College full name - bold */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="mt-2 font-display text-sm md:text-base font-bold text-foreground/80 tracking-wide"
+        >
+          KITS AKSHAR INSTITUTE OF TECHNOLOGY
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.85 }}
+          className="text-muted-foreground text-xs md:text-sm -mt-2"
+        >
+          AUTONOMOUS | Guntur - 522 019
+        </motion.p>
+
         <motion.a
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.9 }}
           href="#events"
-          className="mt-6 px-8 py-3 rounded-lg bg-primary text-primary-foreground font-display text-sm tracking-widest uppercase hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-lg"
+          className="mt-4 px-8 py-3 rounded-lg bg-primary text-primary-foreground font-display text-sm tracking-widest uppercase hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-lg"
         >
           Explore Events
         </motion.a>
       </div>
 
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
         <span className="text-muted-foreground text-xs tracking-widest uppercase">Scroll</span>
         <div className="w-px h-8 bg-gradient-to-b from-primary/50 to-transparent" />

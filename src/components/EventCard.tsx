@@ -13,12 +13,11 @@ const EventCard = ({ title, icon, description, details, index }: EventCardProps)
 
   return (
     <div
-      className="group relative rounded-xl border border-border bg-card p-6 transition-all duration-500 hover:border-primary/40 hover:box-glow cursor-pointer"
+      className="group relative rounded-xl border border-border bg-card p-6 transition-all duration-500 hover:border-primary/40 hover:shadow-lg cursor-pointer"
       style={{ animationDelay: `${index * 100}ms` }}
       onClick={() => setIsExpanded(!isExpanded)}
     >
-      {/* Hover glow effect */}
-      <div className="absolute inset-0 rounded-xl bg-primary/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 rounded-xl bg-primary/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       <div className="relative z-10">
         <div className="flex items-start gap-4">
@@ -33,7 +32,6 @@ const EventCard = ({ title, icon, description, details, index }: EventCardProps)
           </div>
         </div>
 
-        {/* Expandable details */}
         <div
           className={`overflow-hidden transition-all duration-500 ${
             isExpanded ? "max-h-96 mt-4 opacity-100" : "max-h-0 opacity-0"

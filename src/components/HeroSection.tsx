@@ -11,24 +11,30 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="relative flex items-center justify-center -ml-10"
+          className="relative flex items-center justify-center"
         >
           {/* Left Dance Image */}
-          <img
+          <motion.img
             src="/dance.png"
             alt="Dancing Couple"
-            className="absolute left-[-3rem] md:left-[-10rem] top-1/2 -translate-y-1/2 w-32 md:w-56 opacity-90 object-contain dark:invert"
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="absolute left-[-2.5rem] md:left-[-9rem] lg:left-[-11rem] top-1/2 -translate-y-1/2 w-28 md:w-48 lg:w-60 opacity-95 object-contain drop-shadow-[0_4px_20px_rgba(0,0,0,0.15)]"
           />
 
-          <h1 className="font-script text-[8rem] md:text-[14rem] lg:text-[16rem] font-bold leading-[0.85] text-shadow-soft gala-gradient overflow-visible px-8 py-4 relative z-10">
+          <h1 className="font-script text-[8rem] md:text-[14rem] lg:text-[16rem] font-bold leading-[0.85] text-shadow-soft gala-gradient overflow-visible px-12 md:px-16 py-4 relative z-10">
             Gala
           </h1>
 
           {/* Right Dance Image */}
-          <img
+          <motion.img
             src="/solo-dance.png"
             alt="Woman Performing"
-            className="absolute right-[-3rem] md:right-[-10rem] top-1/2 -translate-y-1/2 w-32 md:w-56 opacity-90 object-contain scale-x-[-1] dark:invert"
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="absolute right-[-2.5rem] md:right-[-9rem] lg:right-[-11rem] top-1/2 -translate-y-1/2 w-28 md:w-48 lg:w-60 opacity-95 object-contain scale-x-[-1] drop-shadow-[0_4px_20px_rgba(0,0,0,0.15)]"
           />
         </motion.div>
 

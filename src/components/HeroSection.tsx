@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[80px] -translate-y-1/3 translate-x-1/4" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-secondary/[0.05] blur-[80px] translate-y-1/3 -translate-x-1/4" />
 
-      <div className="relative z-10 flex flex-col items-center gap-4 text-center">
+      <div className="relative z-10 flex flex-col items-center gap-4 text-center pb-12">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -108,15 +108,15 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.9 }}
           href="#events"
-          className="mt-4 px-8 py-3 rounded-lg bg-primary text-primary-foreground font-display text-sm tracking-widest uppercase hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-lg"
+          className="mt-4 mb-16 px-8 py-3 rounded-lg bg-primary text-primary-foreground font-display text-sm tracking-widest uppercase hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-lg"
         >
           Explore Events
         </motion.a>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+      <div className="absolute bottom-1 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
         <span className="text-muted-foreground text-xs tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-primary/50 to-transparent" />
+        <div className="w-px h-6 bg-gradient-to-b from-primary/50 to-transparent" />
       </div>
     </section>
   );

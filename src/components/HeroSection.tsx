@@ -20,7 +20,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -50, rotate: -5 }}
             animate={{ opacity: 1, x: 0, rotate: 0 }}
             transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 80 }}
-            className="absolute left-[-2rem] md:left-[-8rem] lg:left-[-11rem] top-1/2 -translate-y-1/2 w-24 md:w-44 lg:w-56 object-contain mix-blend-multiply opacity-90"
+            className="absolute left-[-2rem] md:left-[-8rem] lg:left-[-11rem] top-1/2 -translate-y-1/2 w-24 md:w-44 lg:w-56 object-contain drop-shadow-[0_8px_30px_rgba(212,20,90,0.3)]"
           />
 
           <h1 className="font-script text-[8rem] md:text-[14rem] lg:text-[16rem] font-bold leading-[0.85] text-shadow-soft gala-gradient overflow-visible px-12 md:px-16 py-4 relative z-10">
@@ -34,7 +34,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 50, rotate: 5 }}
             animate={{ opacity: 1, x: 0, rotate: 0 }}
             transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 80 }}
-            className="absolute right-[-2rem] md:right-[-8rem] lg:right-[-11rem] top-1/2 -translate-y-1/2 w-24 md:w-44 lg:w-56 object-contain mix-blend-multiply opacity-90"
+            className="absolute right-[-2rem] md:right-[-8rem] lg:right-[-11rem] top-1/2 -translate-y-1/2 w-24 md:w-44 lg:w-56 object-contain drop-shadow-[0_8px_30px_rgba(212,20,90,0.3)]"
           />
         </motion.div>
 

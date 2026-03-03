@@ -15,12 +15,12 @@ const HeroSection = () => {
         >
           {/* Left Dance Image */}
           <motion.img
-            src="/dance.png"
-            alt="Dancing Couple"
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="absolute left-[-2.5rem] md:left-[-9rem] lg:left-[-11rem] top-1/2 -translate-y-1/2 w-28 md:w-48 lg:w-60 opacity-95 object-contain drop-shadow-[0_4px_20px_rgba(0,0,0,0.15)]"
+            src="/dance-left.png"
+            alt="Classical Indian Dancer"
+            initial={{ opacity: 0, x: -50, rotate: -5 }}
+            animate={{ opacity: 1, x: 0, rotate: 0 }}
+            transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 80 }}
+            className="absolute left-[-2rem] md:left-[-8rem] lg:left-[-11rem] top-1/2 -translate-y-1/2 w-24 md:w-44 lg:w-56 object-contain drop-shadow-[0_8px_30px_rgba(212,20,90,0.3)]"
           />
 
           <h1 className="font-script text-[8rem] md:text-[14rem] lg:text-[16rem] font-bold leading-[0.85] text-shadow-soft gala-gradient overflow-visible px-12 md:px-16 py-4 relative z-10">
@@ -29,12 +29,12 @@ const HeroSection = () => {
 
           {/* Right Dance Image */}
           <motion.img
-            src="/solo-dance.png"
-            alt="Woman Performing"
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="absolute right-[-2.5rem] md:right-[-9rem] lg:right-[-11rem] top-1/2 -translate-y-1/2 w-28 md:w-48 lg:w-60 opacity-95 object-contain scale-x-[-1] drop-shadow-[0_4px_20px_rgba(0,0,0,0.15)]"
+            src="/dance-right.png"
+            alt="Contemporary Dancer"
+            initial={{ opacity: 0, x: 50, rotate: 5 }}
+            animate={{ opacity: 1, x: 0, rotate: 0 }}
+            transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 80 }}
+            className="absolute right-[-2rem] md:right-[-8rem] lg:right-[-11rem] top-1/2 -translate-y-1/2 w-24 md:w-44 lg:w-56 object-contain drop-shadow-[0_8px_30px_rgba(212,20,90,0.3)]"
           />
         </motion.div>
 

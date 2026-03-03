@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import kitsLogo from "@/assets/kits-logo.png";
 
 const HeroSection = () => {
   return (
@@ -7,62 +6,30 @@ const HeroSection = () => {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[80px] -translate-y-1/3 translate-x-1/4" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-secondary/[0.05] blur-[80px] translate-y-1/3 -translate-x-1/4" />
 
-      <div className="relative z-10 flex flex-col items-center gap-4 text-center pb-12">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex items-center gap-3"
-        >
-          <img
-            src={kitsLogo}
-            alt="KITS Akshar Institute of Technology Logo"
-            className="w-16 h-16 md:w-20 md:h-20"
-          />
-          <div className="text-left">
-            <span className="font-display text-2xl md:text-3xl font-extrabold text-accent tracking-tight">
-              KITS
-            </span>
-            <br />
-            <span className="font-display text-2xl md:text-3xl font-extrabold text-primary tracking-tight">
-              AKSHAR
-            </span>
-          </div>
-        </motion.div>
-
+      <div className="relative z-10 flex flex-col items-center gap-4 text-center pb-12 pt-24">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="relative flex items-center justify-center -ml-10"
         >
-          {/* Left Flourish */}
-          <svg className="absolute left-[-2rem] md:left-[-4rem] top-1/2 -translate-y-[20%] w-16 md:w-28 opacity-90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M90 70 C70 90, 30 90, 20 60 C10 30, 40 10, 60 20 C80 30, 90 50, 75 75 C60 100, 20 80, 15 50" stroke="url(#flourish-gradient)" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-            <path d="M40 30 C30 20, 10 30, 10 50 C10 70, 30 80, 50 60" stroke="url(#flourish-gradient)" strokeWidth="1" strokeLinecap="round" fill="none" />
-            <defs>
-              <linearGradient id="flourish-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#8c1c40" />
-                <stop offset="100%" stopColor="#d12c3f" />
-              </linearGradient>
-            </defs>
-          </svg>
+          {/* Left Dance Image */}
+          <img
+            src="/dance.png"
+            alt="Dancing Couple"
+            className="absolute left-[-3rem] md:left-[-10rem] top-1/2 -translate-y-1/2 w-32 md:w-56 opacity-90 object-contain dark:invert"
+          />
 
-          <h1 className="font-script text-[8rem] md:text-[14rem] lg:text-[16rem] font-bold leading-[0.85] text-shadow-soft gala-gradient overflow-visible px-8 py-4">
+          <h1 className="font-script text-[8rem] md:text-[14rem] lg:text-[16rem] font-bold leading-[0.85] text-shadow-soft gala-gradient overflow-visible px-8 py-4 relative z-10">
             Gala
           </h1>
 
-          {/* Right Flourish */}
-          <svg className="absolute right-[-2rem] md:right-[-4rem] top-1/2 -translate-y-[80%] w-16 md:w-28 opacity-90 scale-x-[-1]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M90 70 C70 90, 30 90, 20 60 C10 30, 40 10, 60 20 C80 30, 90 50, 75 75 C60 100, 20 80, 15 50" stroke="url(#flourish-gradient-right)" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-            <path d="M40 30 C30 20, 10 30, 10 50 C10 70, 30 80, 50 60" stroke="url(#flourish-gradient-right)" strokeWidth="1" strokeLinecap="round" fill="none" />
-            <defs>
-              <linearGradient id="flourish-gradient-right" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#d12c3f" />
-                <stop offset="100%" stopColor="#f55d42" />
-              </linearGradient>
-            </defs>
-          </svg>
+          {/* Right Dance Image */}
+          <img
+            src="/solo-dance.png"
+            alt="Woman Performing"
+            className="absolute right-[-3rem] md:right-[-10rem] top-1/2 -translate-y-1/2 w-32 md:w-56 opacity-90 object-contain scale-x-[-1] dark:invert"
+          />
         </motion.div>
 
         <motion.p

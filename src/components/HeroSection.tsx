@@ -3,7 +3,7 @@ import kitsLogo from "@/assets/kits-logo.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden hero-gradient px-4">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-x-clip hero-gradient px-4">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[80px] -translate-y-1/3 translate-x-1/4" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-secondary/[0.05] blur-[80px] translate-y-1/3 -translate-x-1/4" />
 
@@ -34,7 +34,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="font-script text-8xl md:text-[10rem] lg:text-[12rem] font-bold text-primary leading-none text-shadow-soft -mt-2"
+          className="font-script text-[8rem] md:text-[14rem] lg:text-[16rem] font-bold leading-[0.85] text-shadow-soft gala-gradient overflow-visible px-8 py-4"
         >
           Gala
         </motion.h1>
@@ -43,7 +43,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="font-display text-4xl md:text-5xl font-extrabold text-foreground tracking-wider -mt-6 md:-mt-10"
+          className="font-display text-4xl md:text-5xl font-extrabold text-foreground tracking-wider mt-0 md:-mt-2"
         >
           2K26
         </motion.p>

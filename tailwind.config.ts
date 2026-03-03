@@ -17,7 +17,7 @@ export default {
         display: ["Poppins", "sans-serif"],
         body: ["Space Grotesk", "sans-serif"],
         accent: ["Rajdhani", "sans-serif"],
-        script: ["Dancing Script", "cursive"],
+        script: ["Tangerine", "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",

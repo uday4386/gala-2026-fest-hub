@@ -2,7 +2,7 @@ import { AlertCircle, Clock, FileWarning, HelpCircle, User, Image as ImageIcon, 
 
 const GuidelinesSection = () => {
     return (
-        <section className="py-16 px-4 bg-muted/50 border-y border-border">
+        <section id="guidelines" className="py-16 px-4 bg-muted/50 border-y border-border">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-10">
                     <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">

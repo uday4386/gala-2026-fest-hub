@@ -83,7 +83,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <h1 className="font-script text-[8rem] md:text-[14rem] lg:text-[16rem] font-bold leading-[0.85] text-shadow-soft gala-gradient overflow-visible px-12 md:px-16 py-4">
+          <h1 className="font-script text-[8rem] md:text-[14rem] lg:text-[16rem] font-bold leading-[0.85] text-shadow-soft gala-gradient overflow-visible px-12 md:px-16 py-4 drop-shadow-[0_4px_8px_rgba(30,30,80,0.15)]">
             Gala
           </h1>
         </motion.div>

@@ -14,10 +14,13 @@ const Header = () => {
                     className="flex items-center"
                 >
                     <img
-                        src={collegeLogo}
-                        alt="College Logo"
-                        className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain rounded-md"
+                        src={kitsLogo}
+                        alt="KITS Logo"
+                        className="h-10 sm:h-12 md:h-14 w-auto object-contain"
                     />
+                    <span className="ml-2 font-display text-[0.6rem] sm:text-xs md:text-sm font-bold text-foreground/90 leading-tight max-w-[140px] sm:max-w-none">
+                        KITS Akshar Institute of Technology
+                    </span>
                 </motion.div>
 
                 {/* Right Side Links */}

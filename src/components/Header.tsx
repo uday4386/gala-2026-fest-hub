@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import collegeLogo from "@/assets/college-logo.jpeg";
+import kitsLogo from "@/assets/kits-logo.png";
 
 const Header = () => {
     return (

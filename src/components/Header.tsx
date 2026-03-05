@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import kitsLogo from "@/assets/kits-logo.png";
+import kitsSeal from "@/assets/kits-seal.png";
 
 const Header = () => {
     return (
@@ -11,16 +11,25 @@ const Header = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="flex items-center"
+                    className="flex items-center gap-2 sm:gap-3"
                 >
                     <img
-                        src={kitsLogo}
-                        alt="KITS Logo"
-                        className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+                        src={kitsSeal}
+                        alt="KITS Seal"
+                        className="h-10 sm:h-12 md:h-14 w-auto object-contain rounded-full"
                     />
-                    <span className="ml-2 font-display text-[0.6rem] sm:text-xs md:text-sm font-bold text-foreground/90 leading-tight max-w-[140px] sm:max-w-none">
-                        KITS Akshar Institute of Technology
-                    </span>
+                    <div className="flex flex-col leading-none">
+                        <span className="font-display text-[0.65rem] sm:text-sm md:text-base font-extrabold tracking-wide">
+                            <span className="text-destructive">KITS </span>
+                            <span className="text-primary">AKSHAR</span>
+                        </span>
+                        <span className="font-display text-[0.5rem] sm:text-[0.65rem] md:text-xs font-bold text-foreground/90 tracking-widest">
+                            INSTITUTE OF TECHNOLOGY
+                        </span>
+                        <span className="hidden sm:block font-display text-[0.45rem] md:text-[0.55rem] font-semibold text-primary tracking-wider mt-0.5">
+                            AUTONOMOUS
+                        </span>
+                    </div>
                 </motion.div>
 
                 {/* Right Side Links */}

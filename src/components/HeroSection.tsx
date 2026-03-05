@@ -13,28 +13,77 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="relative flex items-center justify-center"
         >
-          {/* Left Dance Image */}
-          <motion.img
-            src="/dance-left.png"
-            alt="Classical Indian Dancer"
-            initial={{ opacity: 0, x: -50, rotate: -5 }}
-            animate={{ opacity: 1, x: 0, rotate: 0 }}
-            transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 80 }}
-            className="absolute left-[-2rem] md:left-[-8rem] lg:left-[-11rem] top-1/2 -translate-y-1/2 w-24 md:w-44 lg:w-56 object-contain drop-shadow-[0_8px_30px_rgba(212,20,90,0.3)]"
+          {/* Animated orbs - left side */}
+          <motion.div
+            className="absolute left-[-1rem] md:left-[-6rem] lg:left-[-9rem] top-1/2 -translate-y-1/2 flex flex-col gap-4 items-center"
+          >
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={`left-${i}`}
+                className="rounded-full bg-gradient-to-br from-accent/60 to-secondary/40"
+                style={{ width: `${20 + i * 14}px`, height: `${20 + i * 14}px` }}
+                animate={{
+                  y: [0, -12, 0, 12, 0],
+                  scale: [1, 1.15, 1, 0.9, 1],
+                  opacity: [0.6, 1, 0.6, 1, 0.6],
+                }}
+                transition={{
+                  duration: 3 + i * 0.5,
+                  repeat: Infinity,
+                  delay: i * 0.4,
+                  ease: "easeInOut",
+                }}
+              />
+            ))}
+          </motion.div>
+
+          {/* Sparkle lines - left */}
+          <motion.div
+            className="absolute left-[1rem] md:left-[-3rem] top-1/4 w-12 md:w-20 h-px bg-gradient-to-r from-transparent via-accent to-transparent"
+            animate={{ scaleX: [0, 1, 0], opacity: [0, 1, 0] }}
+            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
           />
 
           <h1 className="font-script text-[8rem] md:text-[14rem] lg:text-[16rem] font-bold leading-[0.85] text-shadow-soft gala-gradient overflow-visible px-12 md:px-16 py-4 relative z-10">
             Gala
           </h1>
 
-          {/* Right Dance Image */}
-          <motion.img
-            src="/dance-right.png"
-            alt="Contemporary Dancer"
-            initial={{ opacity: 0, x: 50, rotate: 5 }}
-            animate={{ opacity: 1, x: 0, rotate: 0 }}
-            transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 80 }}
-            className="absolute right-[-2rem] md:right-[-8rem] lg:right-[-11rem] top-1/2 -translate-y-1/2 w-24 md:w-44 lg:w-56 object-contain drop-shadow-[0_8px_30px_rgba(212,20,90,0.3)]"
+          {/* Sparkle lines - right */}
+          <motion.div
+            className="absolute right-[1rem] md:right-[-3rem] bottom-1/4 w-12 md:w-20 h-px bg-gradient-to-r from-transparent via-primary to-transparent"
+            animate={{ scaleX: [0, 1, 0], opacity: [0, 1, 0] }}
+            transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+          />
+
+          {/* Animated orbs - right side */}
+          <motion.div
+            className="absolute right-[-1rem] md:right-[-6rem] lg:right-[-9rem] top-1/2 -translate-y-1/2 flex flex-col gap-4 items-center"
+          >
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={`right-${i}`}
+                className="rounded-full bg-gradient-to-br from-primary/50 to-accent/50"
+                style={{ width: `${20 + i * 14}px`, height: `${20 + i * 14}px` }}
+                animate={{
+                  y: [0, 12, 0, -12, 0],
+                  scale: [1, 0.9, 1, 1.15, 1],
+                  opacity: [0.6, 1, 0.6, 1, 0.6],
+                }}
+                transition={{
+                  duration: 3 + i * 0.5,
+                  repeat: Infinity,
+                  delay: i * 0.4,
+                  ease: "easeInOut",
+                }}
+              />
+            ))}
+          </motion.div>
+
+          {/* Rotating ring */}
+          <motion.div
+            className="absolute inset-0 m-auto w-[90%] md:w-[80%] aspect-square rounded-full border border-accent/10 pointer-events-none"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           />
         </motion.div>
 

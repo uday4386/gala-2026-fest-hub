@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { useMemo } from "react";
-import galaLogo from "@/assets/gala-logo-styled.png";
+import galaLogo from "@/assets/gala-logo-styled-transparent.png";
 
 const FloatingOrb = ({ x, y, size, color, duration, delay }: { x: string; y: string; size: number; color: string; duration: number; delay: number }) => (
   <motion.div
@@ -49,6 +48,27 @@ const sparks = [
   { x: "55%", y: "88%", width: 35, angle: -5, delay: 0.4 },
 ];
 
+const heroCategories = [
+  {
+    label: "Cultural",
+    href: "#events-cultural",
+    className:
+      "badge-cultural border-white/15 shadow-[0_10px_24px_rgba(38,169,232,0.24)] hover:-translate-y-1 hover:border-white/55 hover:brightness-110 hover:shadow-[0_18px_34px_rgba(38,169,232,0.34)]",
+  },
+  {
+    label: "Technical",
+    href: "#events-technical",
+    className:
+      "badge-technical border-white/15 shadow-[0_10px_24px_rgba(124,58,237,0.24)] hover:-translate-y-1 hover:border-white/55 hover:brightness-110 hover:shadow-[0_18px_34px_rgba(124,58,237,0.34)]",
+  },
+  {
+    label: "Sports",
+    href: "#events-sports",
+    className:
+      "badge-sports border-white/15 shadow-[0_10px_24px_rgba(22,163,74,0.22)] hover:-translate-y-1 hover:border-white/55 hover:brightness-110 hover:shadow-[0_18px_34px_rgba(22,163,74,0.3)]",
+  },
+];
+
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden hero-gradient px-4">
@@ -78,11 +98,12 @@ const HeroSection = () => {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[80px] -translate-y-1/3 translate-x-1/4" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-secondary/[0.05] blur-[80px] translate-y-1/3 -translate-x-1/4" />
 
-      <div className="relative z-10 flex flex-col items-center gap-4 text-center pb-12 pt-24">
+      <div className="relative z-10 flex flex-col items-center gap-1 text-center pb-12 pt-24">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
+          className="-mb-6 md:-mb-8"
         >
           <img
             src={galaLogo}
@@ -95,17 +116,17 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="flex gap-3 mt-2"
+          className="flex flex-wrap justify-center gap-3 mt-0"
         >
-          <span className="badge-cultural px-5 py-1.5 rounded font-display text-sm md:text-base font-semibold tracking-wide">
-            Cultural
-          </span>
-          <span className="badge-technical px-5 py-1.5 rounded font-display text-sm md:text-base font-semibold tracking-wide">
-            Technical
-          </span>
-          <span className="badge-sports px-5 py-1.5 rounded font-display text-sm md:text-base font-semibold tracking-wide">
-            Sports
-          </span>
+          {heroCategories.map((category) => (
+            <a
+              key={category.label}
+              href={category.href}
+              className={`rounded-full border px-5 py-1.5 font-display text-sm font-semibold tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 md:text-base ${category.className}`}
+            >
+              {category.label}
+            </a>
+          ))}
         </motion.div>
 
         <motion.div

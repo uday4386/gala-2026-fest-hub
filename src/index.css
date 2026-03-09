@@ -102,17 +102,17 @@
   }
 
   .badge-cultural {
-    background-color: hsl(var(--cultural));
+    background: linear-gradient(135deg, hsl(197 84% 54%), hsl(190 78% 44%));
     color: white;
   }
 
   .badge-technical {
-    background-color: hsl(var(--technical));
+    background: linear-gradient(135deg, hsl(281 63% 49%), hsl(262 58% 38%));
     color: white;
   }
 
   .badge-sports {
-    background-color: hsl(var(--sports));
+    background: linear-gradient(135deg, hsl(158 63% 45%), hsl(145 58% 36%));
     color: white;
   }
 

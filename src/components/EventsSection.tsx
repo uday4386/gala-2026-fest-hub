@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import EventCard from "./EventCard";
 
 const technicalEvents = [
@@ -150,6 +150,12 @@ const sportsEvents = [
 
 type Category = "technical" | "cultural" | "sports";
 
+const hashToCategory: Record<string, Category> = {
+  "#events-technical": "technical",
+  "#events-cultural": "cultural",
+  "#events-sports": "sports",
+};
+
 const categoryConfig: Record<Category, { label: string; colorClass: string; events: typeof technicalEvents }> = {
   technical: { label: "Technical Events", colorClass: "bg-technical text-primary-foreground", events: technicalEvents },
   cultural: { label: "Cultural Events", colorClass: "bg-cultural text-primary-foreground", events: culturalEvents },
@@ -160,8 +166,31 @@ const EventsSection = () => {
   const [activeCategory, setActiveCategory] = useState<Category>("technical");
   const { label, events } = categoryConfig[activeCategory];
 
+  useEffect(() => {
+    const syncCategoryFromHash = () => {
+      const category = hashToCategory[window.location.hash];
+      if (category) {
+        setActiveCategory(category);
+      }
+    };
+
+    syncCategoryFromHash();
+    window.addEventListener("hashchange", syncCategoryFromHash);
+
+    return () => window.removeEventListener("hashchange", syncCategoryFromHash);
+  }, []);
+
+  const handleCategoryClick = (category: Category) => {
+    setActiveCategory(category);
+    window.history.replaceState(null, "", `#events-${category}`);
+    document.getElementById("events")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
-    <section id="events" className="relative py-24 px-4">
+    <section id="events" className="relative py-24 px-4 scroll-mt-20">
+      <div id="events-cultural" className="absolute top-0 h-px w-px" aria-hidden="true" />
+      <div id="events-technical" className="absolute top-0 h-px w-px" aria-hidden="true" />
+      <div id="events-sports" className="absolute top-0 h-px w-px" aria-hidden="true" />
       <div className="max-w-5xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-12">
@@ -179,10 +208,10 @@ const EventsSection = () => {
           {(Object.keys(categoryConfig) as Category[]).map((cat) => (
             <button
               key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2.5 rounded-lg font-display text-sm font-semibold tracking-wide transition-all duration-300 ${activeCategory === cat
-                  ? categoryConfig[cat].colorClass + " shadow-lg scale-105"
-                  : "bg-muted text-muted-foreground hover:bg-muted/80"
+              onClick={() => handleCategoryClick(cat)}
+              className={`rounded-full border px-6 py-2.5 font-display text-sm font-semibold tracking-wide transition-all duration-300 ${activeCategory === cat
+                  ? categoryConfig[cat].colorClass + " border-transparent shadow-lg scale-105"
+                  : "border-border bg-white/70 text-muted-foreground hover:-translate-y-1 hover:border-primary/25 hover:bg-white hover:text-foreground hover:shadow-md"
                 }`}
             >
               {categoryConfig[cat].label}

@@ -87,7 +87,7 @@ const HeroSection = () => {
           <img
             src={galaLogo}
             alt="Gala 2K26 - The Youth Fest"
-            className="w-[280px] md:w-[420px] lg:w-[520px] h-auto drop-shadow-[0_4px_12px_rgba(30,30,80,0.25)]"
+            className="w-[280px] md:w-[420px] lg:w-[520px] h-auto drop-shadow-[0_4px_12px_rgba(30,30,80,0.25)] mix-blend-multiply"
           />
         </motion.div>
 

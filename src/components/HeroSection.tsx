@@ -84,28 +84,12 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <h1 className="font-script text-[8rem] md:text-[14rem] lg:text-[16rem] font-bold leading-[0.85] text-shadow-soft gala-gradient overflow-visible px-12 md:px-16 py-4 drop-shadow-[0_4px_8px_rgba(30,30,80,0.15)]">
-            Gala
-          </h1>
+          <img
+            src={galaLogo}
+            alt="Gala 2K26 - The Youth Fest"
+            className="w-[280px] md:w-[420px] lg:w-[520px] h-auto drop-shadow-[0_4px_12px_rgba(30,30,80,0.25)]"
+          />
         </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="font-display text-4xl md:text-5xl font-extrabold text-foreground tracking-wider mt-0 md:-mt-2"
-        >
-          2K26
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="font-script text-2xl md:text-3xl text-secondary italic"
-        >
-          The Youth Fest
-        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

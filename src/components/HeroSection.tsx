@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useMemo } from "react";
+import galaLogo from "@/assets/gala-logo.png";
 
 const FloatingOrb = ({ x, y, size, color, duration, delay }: { x: string; y: string; size: number; color: string; duration: number; delay: number }) => (
   <motion.div
